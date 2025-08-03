@@ -22,5 +22,21 @@ This project demonstrates an advanced Rubber Ducky-style penetration test using 
 - Hosted listener (`nc` or Metasploit)
 - Windows target machine with USB support and internet access
 
-## 🗂 Project Structure
+## 🧠 How It Works
+
+1. Launches hidden PowerShell via `Win+R`.
+2. Executes a Base64-encoded PowerShell payload (reverse shell).
+3. Adds a new administrator user.
+4. Disables Windows Defender real-time protection.
+5. Creates persistence by writing encoded command to startup registry.
+
+## 🧪 Usage
+
+1. Plug in the Digispark to a Windows machine.
+2. The payload triggers and performs actions automatically.
+3. Use a netcat listener to catch the reverse shell.
+
+```bash
+nc -lvnp 4444
+
 
